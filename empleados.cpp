@@ -13,14 +13,18 @@ struct EMP{
 int main(){
     EMP EMPLEADO[50];
     int n;
-    cin>>n;
+    cout<<"Ingrese la cantidad de empleados: ";cin>>n;
     for(int i=0; i<n; i++){
-        cin>>EMPLEADO[i].numero;
-        cin>>EMPLEADO[i].nombre;
+        cout<<"Ingrese el numero del empleado: ";cin>>EMPLEADO[i].numero;
+        cin.ignore();
+        cout<<"Ingrese el nombre del empleado: ";getline(cin, EMPLEADO[i].nombre);
         for(int j=0; j<12; j++){
-            cin>>EMPLEADO[i].ventas[j];
+            cout<<"Ingrese la cantidad de ventas: ";cin>>EMPLEADO[i].ventas[j];
         }
-        cin>>EMPLEADO[i].salario;
+        cout<<"Ingrese su salario: ";cin>>EMPLEADO[i].salario;
+    }
+    for(int i=0; i<n; i++){
+        cout<<"EMPLEADO #"<<i+1<<endl;
     }
     return 0;
 }
