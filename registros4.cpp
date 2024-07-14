@@ -32,6 +32,7 @@ int main(){
     cin.ignore();
     cout<<"Ingrese un pais a buscar: ";getline(cin, pais);
     int c=0;
+    int maxmed=-1, med=-1;
     for(int i=0; i<n; i++){
         if(at[i].pais==pais){
             cout<<"Atleta #"<<i+1<<endl;
@@ -39,10 +40,21 @@ int main(){
             cout<<"Disciplina: "<<at[i].disciplina<<endl;
             cout<<"Cantidad de medallas: "<<at[i].medallas<<endl;
             c++;
+            if(at[i].medallas>maxmed){
+                maxmed=at[i].medallas;
+                med=i;
+            }
         }
     }
     if(c==0){
         cout<<"No hay coincidencias"<<endl;
+    }
+    else if(med!=-1){
+        cout<<"-------Mayor cantidad de medallas-------"<<endl;
+        cout<<"El atleta del pais de "<<pais<<" con mas medallas es: "<<endl;
+        cout<<"Nombre: "<<at[med].name<<endl;
+        cout<<"Disciplina: "<<at[med].disciplina<<endl;
+        cout<<"Cantidad de medallas: "<<at[med].medallas<<endl;
     }
     return 0;
 }
