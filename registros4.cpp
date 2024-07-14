@@ -55,6 +55,7 @@ int main(){
         cout<<"Nombre: "<<at[med].name<<endl;
         cout<<"Disciplina: "<<at[med].disciplina<<endl;
         cout<<"Cantidad de medallas: "<<at[med].medallas<<endl;
+        system("pause");
     }
     return 0;
 }
