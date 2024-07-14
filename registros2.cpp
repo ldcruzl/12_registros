@@ -33,6 +33,15 @@ int main(){
     double prom=s/(double)n;
     system("cls");
     cout<<"Las personas mayores a 50: "<<m<<endl;
+    system("pause");
     cout<<"El promedio de edades es: "<<prom<<endl;
+    system("pause");
+    cout<<"---------Datos ingresados---------"<<endl;
+    for(int i=0; i<n; i++){
+        cout<<"Persona #"<<i+1<<endl;
+        cout<<"Nombre: "<<persona[i].name<<endl;
+        cout<<"DNI: "<<persona[i].dni<<endl;
+        cout<<"Edad: "<<persona[i].edad<<endl;
+    }
     return 0;
 }
