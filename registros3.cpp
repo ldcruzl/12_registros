@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<string>
+#include<conio.h>
 using namespace std;
 
 struct data{
@@ -16,6 +17,7 @@ int main(){
     cout<<"Ingrese la cantidad de personas: ";cin>>n;
     data persona[n];
     for(int i=0; i<n; i++){
+        system("cls");
         cout<<"Ingrese los datos solicitados de la persona #"<<i+1<<endl;
         cin.ignore();
         cout<<"Ingrese el nombre: ";getline(cin, persona[i].name);
@@ -24,6 +26,7 @@ int main(){
         cout<<"Ingrese el anio de nacimiento: ";cin>>persona[i].year;
     }
     int mes;
+    system("cls");
     cout<<"---------Personas que nacieron en el mismo mes---------"<<endl;
     do{
         cout<<"Ingrese un mes a buscar: ";cin>>mes;
