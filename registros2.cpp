@@ -11,7 +11,7 @@ struct PERSONA{
     int edad;
 };
 int main(){
-    int n;
+    int n, s=0;
     system("cls");
     cout<<"------ESTRUCTURA PERSONA------"<<endl;
     cout<<"Ingrese la cantidad de personas: ";cin>>n;
@@ -22,6 +22,7 @@ int main(){
         cout<<"Ingrese el nombre: ";getline(cin, persona[i].name);
         cout<<"Ingrese el numero de DNI: ";cin>>persona[i].dni;
         cout<<"Ingrese la edad: ";cin>>persona[i].edad;
+        s=s+persona[i].edad;
     }
     int m=0;
     for(int i=0; i<n; i++){
@@ -29,7 +30,9 @@ int main(){
             m++;
         }
     }
+    double prom=s/(double)n;
     system("cls");
     cout<<"Las personas mayores a 50: "<<m<<endl;
+    cout<<"El promedio de edades es: "<<prom<<endl;
     return 0;
 }
